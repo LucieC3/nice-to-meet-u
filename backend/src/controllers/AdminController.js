@@ -96,22 +96,6 @@ class AdminController {
       });
   };
 
-  static checkEmail = (req, res) => {
-    models.admin
-      .findByEmail(req.query.email)
-      .then(([rows]) => {
-        if (rows[0] == null) {
-          res.sendStatus(200);
-        } else {
-          res.sendStatus(422);
-        }
-      })
-      .catch((err) => {
-        console.error(err);
-        res.sendStatus(500);
-      });
-  };
-
   static delete = (req, res) => {
     models.admin
       .delete(req.params.id)

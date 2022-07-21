@@ -1,0 +1,77 @@
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17vh;
+}
+
+.inputEmail,
+.inputLogPassword {
+  width: 90vw;
+  border-radius: 10px;
+  height: 3.5rem;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.inputEmail,
+.inputLogPassword,
+::placeholder {
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: var(--taupe);
+}
+
+.inputLogPassword,
+.inputEmail {
+  color: var(--light-brown);
+}
+
+.inputLogPassword {
+  margin-bottom: 10vh;
+}
+
+.loginbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  max-width: 500px;
+  height: 15vw;
+  max-height: 70px;
+  background-color: var(--beige);
+  color: var(--white);
+  border-radius: 10px;
+  font-family: var(--font);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .inputEmail,
+  .inputLogPassword {
+    width: 50vw;
+    border-radius: 10px;
+    height: 4rem;
+  }
+
+  .buttonreturnlogin {
+    margin-left: -1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .inputLogPassword,
+  .inputEmail {
+    width: 30vw;
+    height: 3.8rem;
+  }
+  .inputLogPassword {
+    margin-bottom: 15vh;
+  }
+  .loginbutton {
+    width: 30vw;
+  }
+  .buttonreturnlogin {
+    margin-left: -5rem;
+  }
+}

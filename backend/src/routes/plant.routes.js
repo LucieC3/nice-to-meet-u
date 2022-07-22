@@ -1,8 +1,5 @@
 const express = require("express");
-const {
-  CategoryController,
-  PlantController,
-} = require("../controllers/PlantController");
+const { CategoryController, PlantController } = require("../controllers");
 
 const routes = express.Router();
 

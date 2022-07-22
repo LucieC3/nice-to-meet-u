@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import ButtonLogout from "../components/ButtonLogout";
+import ButtonLogout from "../components/buttons/ButtonLogout";
 
 function Logout() {
   const handleLogout = (event) => {

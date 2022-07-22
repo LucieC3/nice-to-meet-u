@@ -32,8 +32,6 @@ class CategoryController {
   static edit = (req, res) => {
     const category = req.body;
 
-    // TODO validations (length, format...)
-
     category.id = parseInt(req.params.id, 10);
 
     models.category
@@ -53,8 +51,6 @@ class CategoryController {
 
   static add = (req, res) => {
     const category = req.body;
-
-    // TODO validations (length, format...)
 
     models.category
       .insert(category)

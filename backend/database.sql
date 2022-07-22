@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS `plant`;
+
 CREATE DATABASE IF NOT EXISTS `nicetomeetu`;
 
 USE `nicetomeetu`;

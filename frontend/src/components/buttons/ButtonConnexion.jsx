@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/ButtonConnexion.css";
+import "./ButtonConnexion.css";
 import PropTypes from "prop-types";
 
 function ButtonConnexion({ handleSubmit }) {

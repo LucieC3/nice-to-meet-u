@@ -3,7 +3,7 @@ import "./styles/Login.css";
 import axios from "axios";
 import swal from "sweetalert";
 import { Link, useNavigate } from "react-router-dom";
-import ButtonConnexion from "../components/ButtonConnexion";
+import ButtonConnexion from "../components/buttons/ButtonConnexion";
 
 function Login() {
   const [email, setEmail] = useState("");

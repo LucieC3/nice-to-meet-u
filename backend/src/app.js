@@ -3,6 +3,7 @@ const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const adminRoutes = require("./routes/admin.routes");
+const plantRoutes = require("./routes/plant.routes");
 const router = require("./router");
 
 const app = express();
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 
 // API routes
 app.use(adminRoutes);
+app.use(plantRoutes);
 app.use(router);
 
 module.exports = app;

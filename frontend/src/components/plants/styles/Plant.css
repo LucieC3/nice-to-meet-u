@@ -1,0 +1,30 @@
+.plant-image {
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.plant-container {
+  margin: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.care {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.legende {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 5px;
+}

@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import "./styles/Plant.css";
 
-function Plant(plant) {
+function Plant({ plant }) {
   const { name, water, light, humidity, image, category } = plant;
 
   return (
-    <div className="wj-plant-item">
-      <img className="wj-plant-item-cover" src={image} alt={`${name} cover`} />
+    <div className="plant-container">
+      <img className="plant-image" src={image} alt={`${name}`} />
       <div className="legende">
         <div className="infos">
           <div className="name">{name}</div>

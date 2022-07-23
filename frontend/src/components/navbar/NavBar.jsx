@@ -13,23 +13,23 @@ export default function () {
           </Link>
         </li>
         <li>
-          <Link className="menu-item" to="/apropos">
-            A propos
-          </Link>
-        </li>
-        <li>
           <Link className="menu-item" to="/plantes">
             Plantes
           </Link>
         </li>
         <li>
-          <Link className="menu-item" to="/projets">
-            Projets
+          <Link className="menu-item" to="/calendrier">
+            Calendrier d'entretien
           </Link>
         </li>
         <li>
-          <Link className="menu-item button" to="/contact">
-            Contact
+          <Link className="menu-item" to="/sites-utiles">
+            Sites utiles
+          </Link>
+        </li>
+        <li>
+          <Link className="menu-item button" to="/wishlist">
+            Wishlist
           </Link>
         </li>
       </ul>

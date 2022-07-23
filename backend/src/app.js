@@ -4,7 +4,8 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const adminRoutes = require("./routes/admin.routes");
 const plantRoutes = require("./routes/plant.routes");
-const router = require("./router");
+const websiteRoutes = require("./routes/website.routes");
+const wishlistRoutes = require("./routes/wishlist.routes");
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
 // API routes
 app.use(adminRoutes);
 app.use(plantRoutes);
-app.use(router);
+app.use(websiteRoutes);
+app.use(wishlistRoutes);
 
 module.exports = app;

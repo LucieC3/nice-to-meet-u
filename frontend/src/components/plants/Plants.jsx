@@ -20,9 +20,9 @@ export default function Plants() {
   }, []);
 
   return (
-    <div id="plants-list">
+    <div className="plants-list-container">
       <h1>Plantes</h1>
-      <div className="plant-list">
+      <div className="plants-list">
         {plants &&
           plants.map((plant) => (
             <li key={plant.id}>

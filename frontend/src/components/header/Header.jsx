@@ -8,17 +8,17 @@ export default function Header() {
       <div className="nav">
         <ul>
           <li>
-            <Link to="/apropos">A propos</Link>
-          </li>
-          <li>
             <Link to="/plantes">Plantes</Link>
           </li>
           <li>
-            <Link to="/projets">Projets</Link>
+            <Link to="/calendrier">Calendrier d'entretien</Link>
           </li>
           <li>
-            <Link to="/contact" className="button">
-              Contact
+            <Link to="/sites-utiles">Sites utiles</Link>
+          </li>
+          <li>
+            <Link to="/wishlist" className="button">
+              Wishlist
             </Link>
           </li>
         </ul>

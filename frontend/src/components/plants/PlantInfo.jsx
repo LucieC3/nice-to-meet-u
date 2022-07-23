@@ -16,7 +16,7 @@ export default function PlantInfo() {
   }, []);
 
   return (
-    <div id="plant-detail">
+    <div className="plant-infos">
       <div className="image half">
         <img src={plant.image} alt={`${plant.name}`} />
       </div>

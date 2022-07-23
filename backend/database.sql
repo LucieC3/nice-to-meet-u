@@ -1,18 +1,28 @@
-DROP TABLE IF EXISTS `plant`;
+DROP DATABASE `nicetomeetu`;
 
 CREATE DATABASE IF NOT EXISTS `nicetomeetu`;
 
 USE `nicetomeetu`;
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `admin`;
 
 CREATE TABLE
     `admin` (
         `id` int PRIMARY KEY AUTO_INCREMENT,
         `name` varchar(255),
-        `email` varchar(255),
+        `pseudo` varchar(255),
         `password` varchar(255)
     ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+
+INSERT INTO
+    `admin` (name, pseudo, password)
+VALUES (
+        "Lucie",
+        "Lulupesto",
+        "$2b$10$xKUJthEqZz0Ybd3aCKZ.4."
+    );
+
+DROP TABLE IF EXISTS `plant`;
 
 CREATE TABLE
     `plant` (
@@ -25,37 +35,8 @@ CREATE TABLE
         `image` varchar(255) DEFAULT ""
     ) DEFAULT CHARACTER SET = 'utf8';
 
-CREATE TABLE
-    `category` (
-        `id` int PRIMARY KEY AUTO_INCREMENT,
-        `name` varchar(255) NOT NULL
-    ) DEFAULT CHARACTER SET = 'utf8';
-
 INSERT INTO
-    `admin` (name, email, password)
-VALUES (
-        "Lucie",
-        "lchauvet1094@gmail.com",
-        "lulukiki"
-    );
-
-ALTER TABLE `plant`
-ADD
-    FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
-
-INSERT INTO category (name)
-VALUES ("Grimpantes"), ("Variégations"), ('Plantes vertes');
-
-INSERT INTO
-    `admin` (name, email, password)
-VALUES (
-        "Lucie",
-        "lchauvet1094@gmail.com",
-        "lulukiki"
-    );
-
-INSERT INTO
-    plant (
+    `plant` (
         name,
         `category_id`,
         light,
@@ -64,56 +45,56 @@ INSERT INTO
         image
     )
 VALUES (
-        "Monstera Deliciosa Variegata",
+        " Monstera Deliciosa Variegata ",
         2,
         2,
         3,
-        "moyenne",
-        "/src/assets/monsteravariegata.jpg"
+        " moyenne ",
+        " / src / assets / monsteravariegata.jpg "
     ), (
-        "Oxalis Pourpre",
+        " Oxalis Pourpre ",
         2,
         3,
         1,
-        "moyenne",
-        "/src/assets/oxalispourpre.jpg"
+        " moyenne ",
+        " / src / assets / oxalispourpre.jpg "
     ), (
-        "Ctenanthe Burle Marxii",
+        " Ctenanthe Burle Marxii ",
         1,
         1,
         2,
-        "moyenne",
-        "/src/assets/ctenanthe.jpg"
+        " moyenne ",
+        " / src / assets / ctenanthe.jpg "
     ), (
-        "Monstera Adansonii",
+        " Monstera Adansonii ",
         1,
         2,
         3,
-        "moyenne",
-        "/src/assets/adansonii.jpg"
+        " moyenne ",
+        " / src / assets / adansonii.jpg "
     ), (
-        "Philodendron Micans",
+        " Philodendron Micans ",
         2,
         3,
         1,
-        "moyenne",
-        "/src/assets/micans.jpg"
+        " moyenne ",
+        " / src / assets / micans.jpg "
     ), (
-        "Pachira Aquatica",
+        " Pachira Aquatica ",
         3,
         2,
         1,
-        "moyenne",
-        "/src/assets/pachira.jpg"
+        " moyenne ",
+        " / src / assets / pachira.jpg "
     ), (
-        "Syngonium Neon Robusta",
+        " Syngonium Neon Robusta ",
         2,
         2,
         3,
-        "moyenne",
-        "/src/assets/syngoneon.jpg"
+        " moyenne ",
+        " / src / assets / syngoneon.jpg "
     ), (
-        "Pothos N'Joy",
+        " Pothos N 'Joy",
         3,
         2,
         1,
@@ -127,3 +108,83 @@ VALUES (
         "moyenne",
         "/src/assets/begomaculata.jpg"
     );
+
+DROP TABLE IF EXISTS `category`;
+
+CREATE TABLE
+    `category` (
+        `id` int PRIMARY KEY AUTO_INCREMENT,
+        `name` varchar(255) NOT NULL
+    );
+
+INSERT INTO `category` (name)
+VALUES ("Grimpantes"), ("Variégations"), ("Plantes vertes");
+
+DROP TABLE IF EXISTS `website`;
+
+CREATE TABLE
+    `website` (
+        `id` int PRIMARY KEY AUTO_INCREMENT,
+        `name` varchar(255) NOT NULL,
+        `link` varchar(255) NOT NULL,
+    );
+
+INSERT INTO
+    `website` (name, link)
+VALUES (
+        "House Party - Plantes rares",
+        "https://www.houseparty-plantes.com/boutique"
+    ), (
+        "Casa Botanica",
+        "https://casa-botanica.com"
+    ), (
+        "Palmaris",
+        "http://www.palmaris.org"
+    ), (
+        "Noé Bouture",
+        "https://noebouture.com"
+    ), (
+        "Plant and stories",
+        "https://plantandstories.com"
+    ), (
+        "Boutures et moi",
+        "https://www.bouturesetmoi.fr"
+    ), (
+        "Le Goût des Plantes",
+        "https://legoutdesplantes.com"
+    ), (
+        "Hanko Jungle",
+        "https://www.hanko-jungle.com"
+    ), (
+        "Plnts",
+        "https://plnts.com/fr"
+    ), (
+        "Plantlovers",
+        "https://www.plantlovers.eu"
+    ), (
+        "Plantes pour tous",
+        "https://plantespourtous.co"
+    ), (
+        "Maison Bouture",
+        "https://maisonbouture.com"
+    ),
+;
+
+DROP TABLE IF EXISTS `wishlist`;
+
+CREATE TABLE
+    `wishlist` (
+        `id` int PRIMARY KEY AUTO_INCREMENT,
+        `name` varchar(255) NOT NULL,
+    );
+
+INSERT INTO `wishlist` (name)
+VALUES (
+        "Philodendron White Princess"
+    ), ("Philodendron Pink Princess"), (
+        "Senecio Rowleyanus Variegata"
+    ), ("Scindapsus Treubii Dark"), ("Syngonium Mojito"), ("Columnea Arguta"), ("Caladium - toutes variétés"), ("Philodendron Majesty"), ("Monstera Standleyana"), ("Syngonium Wendlandii"), ("Ctenanthe Amagris"), ("Syngonium Albo variegata");
+
+ALTER TABLE `plant`
+ADD
+    FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);

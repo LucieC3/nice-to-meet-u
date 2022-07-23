@@ -6,25 +6,25 @@ import { Link, useNavigate } from "react-router-dom";
 import ButtonConnexion from "../components/buttons/ButtonConnexion";
 
 function Login() {
-  const [email, setEmail] = useState("");
+  const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!email || !password) {
+    if (!pseudo || !password) {
       swal({
         title: "Oups !",
-        text: "Merci de renseigner votre email",
+        text: "Merci de renseigner votre pseudo",
         icon: "error",
         confirmButtonText: "GOOD",
       });
     } else {
       axios
         .post(
-          `${import.meta.env.VITE_BACKEND_URL}/admin/login`,
-          { email, password },
+          `${import.meta.env.VITE_BACKEND_URL}/admin`,
+          { pseudo, password },
           { withCredentials: true }
         )
         .then(() => navigate("/admin", { replace: true }))
@@ -43,12 +43,12 @@ function Login() {
       <div className="formloginadmin">
         <form className="form-login-admin">
           <input
-            className="inputEmailAdmin"
+            className="inputPseudoAdmin"
             type="text"
-            name="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="pseudo"
+            id="pseudo"
+            value={pseudo}
+            onChange={(e) => setPseudo(e.target.value)}
           />
           <input
             className="inputLogPasswordAdmin"

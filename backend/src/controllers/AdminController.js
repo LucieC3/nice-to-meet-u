@@ -5,12 +5,12 @@ const models = require("../models");
 
 class AdminController {
   static login = (req, res) => {
-    const { email, password } = req.body;
+    const { pseudo, password } = req.body;
 
     const validationErrors = Joi.object({
-      email: Joi.string().max(45).required(),
+      pseudo: Joi.string().max(15).required(),
       password: Joi.string().max(15).required(),
-    }).validate({ email, password }).error;
+    }).validate({ pseudo, password }).error;
 
     if (validationErrors) {
       res.status(422).send(validationErrors);
@@ -18,16 +18,17 @@ class AdminController {
     }
 
     models.admin
-      .findByEmail(email)
+      .findByPseudo(pseudo)
       .then(async ([rows]) => {
         if (rows[0] == null) {
-          res.status(403).send({ error: "email ou mot de passe incorrect" });
+          res.status(403).send({ error: "pseudo ou mot de passe incorrect" });
         } else {
           const { id, password: hash } = rows[0];
           try {
-            if (await bcrypt.compare(password, hash)) {
+            const isValid = await bcrypt.compare(password, hash);
+            if (isValid) {
               const token = await jwt.sign(
-                { id },
+                { id, pseudo },
                 process.env.JWT_AUTH_SECRET,
                 { expiresIn: "1h" }
               );
@@ -38,11 +39,11 @@ class AdminController {
                   secure: process.env.NODE_ENV === "production",
                 })
                 .status(200)
-                .send({ id, email });
+                .send({ id, pseudo });
             } else {
               res
                 .status(403)
-                .send("L'email ou le mot de passe ne sont pas valides");
+                .send("Le pseudo ou le mot de passe ne sont pas valides");
             }
           } catch (err) {
             res.status(500).send(`Erreur Interne avec bcrypt ${err}`);

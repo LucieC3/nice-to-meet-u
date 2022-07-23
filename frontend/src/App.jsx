@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Plants from "./components/plants/Plants";
+import Plant from "./components/plants/Plant";
 import "./App.css";
-import PlantInfo from "./components/plants/PlantInfo";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/admin/login" element={<Login />} />
 
-      <Route path="/plants" element={<Plants />} />
-      <Route path="/plants/:id" element={<PlantInfo />} />
+      <Route path="/plantes" element={<Plants />} />
+      <Route path="/plantes/:id" element={<Plant />} />
     </Routes>
   );
 }

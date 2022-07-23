@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Care from "./Care";
+import axios from "axios";
 
 import "./styles/PlantInfo.css";
 
@@ -9,15 +9,16 @@ export default function PlantInfo() {
   const [plant, setPlant] = useState([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/plants/${id}`)
-      .then((response) => response.json())
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/plantes/${id}`)
+      .then((response) => response.data)
       .then((data) => setPlant(data));
   }, []);
 
   return (
     <div id="plant-detail">
       <div className="image half">
-        <img src={plant.image} alt="" />
+        <img src={plant.image} alt={`${plant.name}`} />
       </div>
 
       <div className="detail half">
@@ -27,11 +28,11 @@ export default function PlantInfo() {
           <div className="category">Category : {plant.category}</div>
 
           <div className="light">
-            Besoin en lumière : <Care type="sun" amount={plant.light} />
+            <p>Besoin en lumière :</p>
           </div>
 
           <div className="water">
-            Besoin en eau : <Care type="water" amount={plant.water} />
+            <p>Besoin en eau :</p>
           </div>
         </div>
       </div>

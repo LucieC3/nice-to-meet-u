@@ -18,7 +18,7 @@ export default function () {
           </Link>
         </li>
         <li>
-          <Link className="menu-item" to="/plants">
+          <Link className="menu-item" to="/plantes">
             Plantes
           </Link>
         </li>

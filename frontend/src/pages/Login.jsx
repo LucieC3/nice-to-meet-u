@@ -39,7 +39,6 @@ function Login() {
     <div className="loginadmin">
       <div className="admin-login-top">
         <h1>Bienvenue</h1>
-        <img className="logo-admin" src="" alt="" />
       </div>
       <div className="formloginadmin">
         <form className="form-login-admin">

@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital@0;1&family=Fraunces:wght@100&display=swap");
 
 .header {
-  /* background-image: url("/public/images/image-header.jpg"); */
-  background-repeat: no-repeat;
   height: 750px;
   background-size: 100% 100%;
 }

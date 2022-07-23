@@ -2,15 +2,18 @@ import "./styles/Plants.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import PlantInfo from "./PlantInfo";
+import Plant from "./Plant";
 
 export default function Plants() {
   const [plants, setPlants] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/plants`)
-      .then((res) => setPlants(res.data))
+      .get(`${import.meta.env.VITE_BACKEND_URL}/plantes`)
+      .then((response) => response.data)
+      .then((data) => {
+        setPlants(data);
+      })
       .catch((error) => {
         console.error(error);
       });
@@ -23,8 +26,8 @@ export default function Plants() {
         {plants &&
           plants.map((plant) => (
             <li key={plant.id}>
-              <Link to={`/plants/${plant.id}`}>
-                <PlantInfo plant={plant} />
+              <Link to={`/plantes/${plant.id}`}>
+                <Plant plant={plant} />
               </Link>
             </li>
           ))}

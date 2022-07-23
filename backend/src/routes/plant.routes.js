@@ -3,11 +3,11 @@ const { CategoryController, PlantController } = require("../controllers");
 
 const routes = express.Router();
 
-routes.get("/plants", PlantController.browse);
-routes.get("/plants/:id", PlantController.read);
-routes.put("/plants/:id", PlantController.edit);
-routes.post("/plants", PlantController.add);
-routes.delete("/plants/:id", PlantController.delete);
+routes.get("/plantes", PlantController.browse);
+routes.get("/plantes/:id", PlantController.read);
+routes.put("/plantes/:id", PlantController.edit);
+routes.post("/plantes", PlantController.add);
+routes.delete("/plantes/:id", PlantController.delete);
 
 routes.get("/categories", CategoryController.browse);
 

@@ -6,6 +6,13 @@ a {
   text-decoration: none;
 }
 
+.image-logo {
+  width: 15vw;
+  height: 20vh;
+  margin-left: -20px;
+  margin-right: 45px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -15,16 +22,6 @@ a {
 .hamburger {
   display: none;
   margin-left: auto;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #101010;
 }
 
 .nav-menu {
@@ -38,129 +35,45 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
+.arrow-down {
+  padding-left: 3px;
+  height: 5px;
+  margin-top: 3px;
+}
 .nav-menu-right {
   display: flex;
   margin-left: auto;
   margin-top: 35px;
 }
 
-.btn--reg {
-  color: hsl(0, 1%, 61%);
-  background-color: white;
-  width: 90px;
-  height: 35px;
-  padding-top: 4px;
-  margin-top: -12px;
-  max-width: 90px;
-  border-radius: 10px;
-  margin-left: 40px;
-  font-family: Epilogue;
-  font-size: 12px;
-  cursor: pointer;
-  border-style: double;
-  border-color: black;
-}
-
-.btn--reg:hover {
-  color: black;
-}
-
 .nav-item {
   margin-right: 3rem;
+  font-size: 1.3rem;
 }
 
 .nav-link {
-  font-size: 12px;
-  color: hsl(0, 0%, 61%);
+  color: var(--light-brown);
   display: flex;
 }
 
 .nav-link:hover {
-  color: black;
-}
-
-/* main content */
-.hero {
-  display: flex;
-}
-
-.details {
-  padding: 100px 0px 0px 150px;
-  margin-right: 10px;
-}
-
-.img--hero {
-  max-width: 100%;
-  max-height: 600px;
-  margin-top: 50px;
-  padding-left: 100px;
-  margin-bottom: -30px;
-  padding-bottom: 90px;
-}
-
-.btn--learn {
-  background-color: black;
-  color: white;
-  height: 42px;
-  border-radius: 12px;
-  font-family: Epilogue;
-  font-size: 13px;
-  width: 120px;
-  max-width: 120px;
-  border-style: none;
-  cursor: pointer;
-  border-style: double;
-  border-color: black;
-}
-
-.btn--learn:hover {
-  background-color: white;
-  color: black;
-  border-style: solid;
-}
-
-.watermarks {
-  display: flex;
-  margin-top: 70px;
-  justify-content: space-around;
-  height: 20px;
-  margin-right: 25px;
-}
-
-h1 {
-  font-size: 65px;
-}
-
-p {
-  font-size: 14px;
-  color: hsl(0, 0%, 41%);
-  font-weight: 500;
-  width: 335px;
-  line-height: 20px;
-  padding-bottom: 30px;
-}
-
-.img-db-icon {
-  padding-right: 10px;
-}
-
-.img--hero-mob {
-  display: none;
-}
-
-.make {
-  display: none;
+  color: brown;
 }
 
 /* for mobile */
 @media only screen and (max-width: 600px) {
+  .image-logo {
+    width: 40vw;
+    height: 15vh;
+    margin-left: -40px;
+  }
+
   .nav-menu {
     position: fixed;
     right: 100%;
     top: 5rem;
     flex-direction: column;
-    background-color: white;
+    background-color: red;
     width: 200px;
     height: 500px;
     margin-left: auto;
@@ -199,13 +112,6 @@ p {
     margin-right: auto;
   }
 
-  .btn--reg {
-    width: 160px;
-    padding-top: 4px;
-    margin-top: 0px;
-    margin-left: -50px;
-    max-width: 160px;
-  }
   .hamburger {
     display: block;
     cursor: pointer;
@@ -213,47 +119,15 @@ p {
   .login {
     background-color: teal;
   }
-  .hero {
+
+  .bar {
     display: block;
-  }
-
-  .img--hero-mob {
-    display: grid;
-    width: 100%;
-  }
-
-  .img--hero {
-    display: none;
-  }
-
-  .details {
-    text-align: center;
-    padding: 0px;
-    margin-right: 0px;
-  }
-
-  h1 {
-    display: none;
-  }
-
-  .make {
-    display: grid;
-    font-size: 35px;
-  }
-
-  .watermarks {
-    margin: auto;
-    margin-bottom: 10px;
-  }
-
-  p {
-    padding-bottom: 25px;
-    margin: auto;
-    font-size: 15px;
-  }
-
-  .btn--learn {
-    margin-bottom: 45px;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
   }
 
   .hamburger.active .bar:nth-child(2) {

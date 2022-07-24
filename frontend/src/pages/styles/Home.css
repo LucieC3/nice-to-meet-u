@@ -1,0 +1,20 @@
+.banner-home {
+  height: 80vh;
+  width: 100vw;
+}
+
+.banner-home-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-home {
+    display: none;
+  }
+
+  .banner-home-mobile {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+  }
+}

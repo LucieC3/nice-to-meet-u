@@ -1,15 +1,23 @@
-import React from "react";
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../../assets/logo-ficus.png";
 
 export default function Navbar() {
+  const [active, setActive] = useState(true);
+
+  function mobileMenu() {
+    setActive(!active);
+  }
+
   return (
     <nav className="navbar">
       <Link to="/">
-        <img className="image--logo" src={logo} alt="logo ficus" />
+        <img className="image-logo" src={logo} alt="logo ficus" />
       </Link>
-      <div className="nav-menu">
+      <div className={active ? "nav-menu" : null}>
         <ul className="nav-menu-left">
           <li className="nav-item">
             <Link to="/plantes" className="nav-link">
@@ -40,7 +48,7 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="hamburger">
+      <div className={active ? "hamburger" : null} onClick={mobileMenu}>
         <span className="bar" />
         <span className="bar" />
         <span className="bar" />

@@ -17,7 +17,7 @@ export default function Navbar() {
       <Link to="/">
         <img className="image-logo" src={logo} alt="logo ficus" />
       </Link>
-      <div className={active ? "nav-menu" : null}>
+      <div className={active ? "nav-menu" : null} onClick={mobileMenu}>
         <ul className="nav-menu-left">
           <li className="nav-item">
             <Link to="/plantes" className="nav-link">
@@ -42,7 +42,7 @@ export default function Navbar() {
         </ul>
         <ul className="nav-menu-right">
           <li className="nav-item">
-            <Link to="/admin" className="nav-link">
+            <Link to="/admin" className="nav-link login">
               Login
             </Link>
           </li>

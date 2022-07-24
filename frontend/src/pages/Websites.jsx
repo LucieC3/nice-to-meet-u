@@ -20,17 +20,18 @@ export default function Websites() {
   }, []);
 
   return (
-    <div>
+    <div className="global-websites">
       <Header />
-      <div className="websites-list-container">
-        <h1>Sites utiles</h1>
-        <div className="websites-list">
-          {websites &&
-            websites.map((website) => (
-              <li key={website.id}>
-                <Website website={website} />
-              </li>
-            ))}
+      <div className="container-web">
+        <div className="websites-list-container">
+          <div className="websites-list">
+            {websites &&
+              websites.map((website) => (
+                <li key={website.id}>
+                  <Website website={website} />
+                </li>
+              ))}
+          </div>
         </div>
       </div>
     </div>

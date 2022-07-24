@@ -43,7 +43,6 @@ a {
 .nav-menu-right {
   display: flex;
   margin-left: auto;
-  margin-top: 35px;
 }
 
 .nav-item {
@@ -56,11 +55,16 @@ a {
   display: flex;
 }
 
+.login {
+  font-size: 0.8rem;
+  color: var(--brown);
+}
+
 .nav-link:hover {
   color: brown;
 }
 
-/* for mobile */
+/* MOBILE */
 @media only screen and (max-width: 600px) {
   .image-logo {
     width: 40vw;
@@ -73,7 +77,6 @@ a {
     right: 100%;
     top: 5rem;
     flex-direction: column;
-    background-color: red;
     width: 200px;
     height: 500px;
     margin-left: auto;
@@ -115,9 +118,6 @@ a {
   .hamburger {
     display: block;
     cursor: pointer;
-  }
-  .login {
-    background-color: teal;
   }
 
   .bar {

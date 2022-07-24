@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
+import "./Wish.css";
+import { GrMagic } from "react-icons/gr";
 
 function Wish({ wish }) {
   const { name } = wish;
 
   return (
-    <div className="wishlist-container">
-      <div>
-        <div className="name">{name}</div>
+    <div>
+      <div className="wish-name">
+        <GrMagic />
+        {name}
       </div>
     </div>
   );

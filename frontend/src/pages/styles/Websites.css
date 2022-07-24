@@ -1,0 +1,25 @@
+.global-websites {
+  background-color: var(--light-taupe);
+}
+
+.container-web {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.websites-list-container {
+  width: 60vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .websites-list-container {
+    width: 80vw;
+  }
+}

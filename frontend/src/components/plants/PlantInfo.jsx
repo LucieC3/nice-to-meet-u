@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import "./styles/PlantInfo.css";
+import Header from "../header/Header";
 
 export default function PlantInfo() {
   const { id } = useParams();
@@ -16,23 +17,29 @@ export default function PlantInfo() {
   }, []);
 
   return (
-    <div className="plant-infos">
-      <div className="image half">
-        <img src={plant.image} alt={`${plant.name}`} />
-      </div>
+    <div>
+      <Header />
+      <div className="plant-infos">
+        <div className="image half">
+          <img src={plant.image} alt={`${plant.name}`} />
+        </div>
 
-      <div className="detail half">
-        <h1>{plant.name}</h1>
+        <div className="detail half">
+          <h1>{plant.name}</h1>
 
-        <div className="data">
-          <div className="category">Category : {plant.category}</div>
+          <div className="data">
+            <div className="category">Categorie : {plant.category}</div>
 
-          <div className="light">
-            <p>Besoin en lumière :</p>
-          </div>
+            <div className="light">
+              <p>Exposition : {plant.light}</p>
+            </div>
 
-          <div className="water">
-            <p>Besoin en eau :</p>
+            <div className="water">
+              <p>Arrosage : {plant.water}</p>
+            </div>
+            <div className="humidity">
+              <p>Humidité : {plant.humidity}</p>
+            </div>
           </div>
         </div>
       </div>

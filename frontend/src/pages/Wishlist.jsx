@@ -20,10 +20,9 @@ export default function Wishlist() {
   }, []);
 
   return (
-    <div>
+    <div className="global-wishlist">
       <Header />
       <div className="wish-list-container">
-        <h1>Wishlist</h1>
         <div className="wish-list">
           {wishlist &&
             wishlist.map((wish) => (

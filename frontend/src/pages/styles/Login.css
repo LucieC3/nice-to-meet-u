@@ -1,77 +1,92 @@
+.login-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+}
+
 .form-login {
   display: flex;
+  width: 50vw;
+  height: 50vh;
   flex-direction: column;
   align-items: center;
-  margin-top: 17vh;
+  justify-content: center;
+  background-color: var(--beige);
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.input-pseudopass {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  width: 30vw;
 }
 
 .inputPseudo,
-.inputLogPassword {
-  width: 90vw;
+.inputPassword {
+  width: 25vw;
   border-radius: 10px;
-  height: 3.5rem;
+  height: 3rem;
   border: none;
   margin-bottom: 40px;
 }
 
 .inputPseudo,
-.inputLogPassword,
+.inputPassword,
 ::placeholder {
   padding-left: 20px;
   font-size: 1.1rem;
   color: var(--taupe);
 }
 
-.inputLogPassword,
-.inputPseudo {
-  color: var(--light-brown);
-}
-
-.inputLogPassword {
-  margin-bottom: 10vh;
-}
-
-.loginbutton {
+.buttonconnexion {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90vw;
+  width: 70vw;
   max-width: 500px;
   height: 15vw;
   max-height: 70px;
-  background-color: var(--beige);
-  color: var(--white);
+  background-color: var(--light-taupe);
+  color: var(--brown);
   border-radius: 10px;
   font-family: var(--font);
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .inputPseudo,
-  .inputLogPassword {
-    width: 50vw;
-    border-radius: 10px;
-    height: 4rem;
-  }
-
-  .buttonreturnlogin {
-    margin-left: -1rem;
+@media only screen and (max-width: 600px) {
+  .form-login {
+    height: 40vh;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .inputLogPassword,
-  .inputPseudo {
-    width: 30vw;
-    height: 3.8rem;
-  }
-  .inputLogPassword {
-    margin-bottom: 15vh;
-  }
-  .loginbutton {
-    width: 30vw;
-  }
-  .buttonreturnlogin {
-    margin-left: -5rem;
-  }
+.input-pseudopass {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+
+.inputPassword,
+.inputPseudo {
+  width: 50vw;
+  height: 6vh;
+}
+.inputPassword {
+  margin-bottom: 15vh;
+}
+
+.buttonconnexion {
+  width: 50vw;
+  height: 6vh;
 }

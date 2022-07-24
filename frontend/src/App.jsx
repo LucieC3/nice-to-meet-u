@@ -3,9 +3,11 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Plants from "./pages/Plants";
 import PlantInfo from "./components/plants/PlantInfo";
+import PlantAdd from "./components/plants/PlantAdd";
 import Websites from "./pages/Websites";
 import Wishlist from "./pages/Wishlist";
 import "./App.css";
+import Calendar from "./pages/Calendar";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
 
       <Route path="/plantes" element={<Plants />} />
       <Route path="/plantes/:id" element={<PlantInfo />} />
+      <Route path="/plantes/ajouter-une-plante" element={<PlantAdd />} />
 
+      <Route path="/calendrier" element={<Calendar />} />
       <Route path="/sites-utiles" element={<Websites />} />
       <Route path="/wishlist" element={<Wishlist />} />
     </Routes>

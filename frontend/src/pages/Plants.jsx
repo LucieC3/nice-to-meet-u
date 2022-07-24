@@ -24,7 +24,6 @@ export default function Plants() {
     <div>
       <Header />
       <div className="plants-list-container">
-        <h1>Collection</h1>
         <div className="plants-list">
           {plants &&
             plants.map((plant) => (

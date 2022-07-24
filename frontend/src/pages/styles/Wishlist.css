@@ -1,0 +1,12 @@
+.global-wishlist {
+  background-color: var(--light-taupe);
+  height: 100vh;
+}
+
+.wish-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 45vh;
+}

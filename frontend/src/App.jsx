@@ -1,8 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Plants from "./components/plants/Plants";
+import Plants from "./pages/Plants";
 import PlantInfo from "./components/plants/PlantInfo";
+import Websites from "./pages/Websites";
+import Wishlist from "./pages/Wishlist";
 import "./App.css";
 
 function App() {
@@ -13,6 +15,9 @@ function App() {
 
       <Route path="/plantes" element={<Plants />} />
       <Route path="/plantes/:id" element={<PlantInfo />} />
+
+      <Route path="/sites-utiles" element={<Websites />} />
+      <Route path="/wishlist" element={<Wishlist />} />
     </Routes>
   );
 }

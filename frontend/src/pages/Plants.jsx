@@ -2,7 +2,8 @@ import "./styles/Plants.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Plant from "./Plant";
+import Plant from "../components/plants/Plant";
+import Header from "../components/header/Header";
 
 export default function Plants() {
   const [plants, setPlants] = useState([]);
@@ -20,17 +21,20 @@ export default function Plants() {
   }, []);
 
   return (
-    <div className="plants-list-container">
-      <h1>Plantes</h1>
-      <div className="plants-list">
-        {plants &&
-          plants.map((plant) => (
-            <li key={plant.id}>
-              <Link to={`/plantes/${plant.id}`}>
-                <Plant plant={plant} />
-              </Link>
-            </li>
-          ))}
+    <div>
+      <Header />
+      <div className="plants-list-container">
+        <h1>Plantes</h1>
+        <div className="plants-list">
+          {plants &&
+            plants.map((plant) => (
+              <li key={plant.id}>
+                <Link to={`/plantes/${plant.id}`}>
+                  <Plant plant={plant} />
+                </Link>
+              </li>
+            ))}
+        </div>
       </div>
     </div>
   );

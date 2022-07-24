@@ -45,56 +45,56 @@ INSERT INTO
         image
     )
 VALUES (
-        " Monstera Deliciosa Variegata ",
+        "Monstera Deliciosa Variegata",
         2,
         2,
         3,
-        " moyenne ",
-        " / src / assets / monsteravariegata.jpg "
+        "moyenne",
+        "/src/assets/monsteravariegata.jpg"
     ), (
-        " Oxalis Pourpre ",
+        "Oxalis Pourpre",
         2,
         3,
         1,
-        " moyenne ",
-        " / src / assets / oxalispourpre.jpg "
+        "moyenne",
+        "/src/assets/oxalispourpre.jpg"
     ), (
-        " Ctenanthe Burle Marxii ",
+        "Ctenanthe Burle Marxii",
         1,
         1,
         2,
-        " moyenne ",
-        " / src / assets / ctenanthe.jpg "
+        "moyenne",
+        "/src/assets/ctenanthe.jpg"
     ), (
-        " Monstera Adansonii ",
+        "Monstera Adansonii",
         1,
-        2,
-        3,
-        " moyenne ",
-        " / src / assets / adansonii.jpg "
-    ), (
-        " Philodendron Micans ",
         2,
         3,
+        "moyenne",
+        "/src/assets/adansonii.jpg"
+    ), (
+        "Philodendron Micans",
+        2,
+        3,
         1,
-        " moyenne ",
-        " / src / assets / micans.jpg "
+        "moyenne",
+        "/src/assets/micans.jpg"
     ), (
         " Pachira Aquatica ",
         3,
         2,
         1,
-        " moyenne ",
-        " / src / assets / pachira.jpg "
+        "moyenne",
+        "/src/assets/pachira.jpg"
     ), (
         " Syngonium Neon Robusta ",
         2,
         2,
         3,
-        " moyenne ",
-        " / src / assets / syngoneon.jpg "
+        "moyenne",
+        "/src/assets/syngoneon.jpg"
     ), (
-        " Pothos N 'Joy",
+        "Pothos N 'Joy",
         3,
         2,
         1,
@@ -126,7 +126,7 @@ CREATE TABLE
     `website` (
         `id` int PRIMARY KEY AUTO_INCREMENT,
         `name` varchar(255) NOT NULL,
-        `link` varchar(255) NOT NULL,
+        `link` varchar(255) NOT NULL
     );
 
 INSERT INTO
@@ -167,15 +167,14 @@ VALUES (
     ), (
         "Maison Bouture",
         "https://maisonbouture.com"
-    ),
-;
+    );
 
 DROP TABLE IF EXISTS `wishlist`;
 
 CREATE TABLE
     `wishlist` (
         `id` int PRIMARY KEY AUTO_INCREMENT,
-        `name` varchar(255) NOT NULL,
+        `name` varchar(255) NOT NULL
     );
 
 INSERT INTO `wishlist` (name)

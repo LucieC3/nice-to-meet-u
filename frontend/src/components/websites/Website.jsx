@@ -7,13 +7,10 @@ function Website({ website }) {
 
   return (
     <div className="div-name-link">
-      <div className="website-name">
-        <RiPlantFill />
+      <RiPlantFill />
+      <a className="website-name" href={link}>
         {name}
-      </div>
-      <div className="website-link">
-        <a href={link}>{link}</a>
-      </div>
+      </a>
     </div>
   );
 }

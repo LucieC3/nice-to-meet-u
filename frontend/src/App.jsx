@@ -11,18 +11,20 @@ import Calendar from "./pages/Calendar";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/admin" element={<Login />} />
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Login />} />
 
-      <Route path="/plantes" element={<Plants />} />
-      <Route path="/plantes/:id" element={<PlantInfo />} />
-      <Route path="/plantes/ajouter-une-plante" element={<PlantAdd />} />
+        <Route path="/plantes" element={<Plants />} />
+        <Route path="/plantes/:id" element={<PlantInfo />} />
+        <Route path="/plantes/ajouter-une-plante" element={<PlantAdd />} />
 
-      <Route path="/calendrier" element={<Calendar />} />
-      <Route path="/sites-utiles" element={<Websites />} />
-      <Route path="/wishlist" element={<Wishlist />} />
-    </Routes>
+        <Route path="/calendrier" element={<Calendar />} />
+        <Route path="/sites-utiles" element={<Websites />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+      </Routes>
+    </div>
   );
 }
 

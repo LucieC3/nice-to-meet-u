@@ -29,8 +29,8 @@ CREATE TABLE
         `id` int PRIMARY KEY AUTO_INCREMENT,
         `name` varchar(255) NOT NULL,
         `category_id` int NOT NULL,
-        `light` int DEFAULT 1,
-        `water` int DEFAULT 1,
+        `light` varchar(255) NOT NULL,
+        `water` varchar(255) NOT NULL,
         `humidity` varchar(255) NOT NULL,
         `image` varchar(255) DEFAULT ""
     ) DEFAULT CHARACTER SET = 'utf8';
@@ -46,66 +46,66 @@ INSERT INTO
     )
 VALUES (
         "Monstera Deliciosa Variegata",
-        2,
-        2,
         3,
-        "moyenne",
+        "Lumineux - Pas de soleil direct (sauf matin ou fin de journée)",
+        "1 fois par semaine au printemps/été - Bien laisser sécher le terreau",
+        "Brumiser régulièrement",
         "/src/assets/monsteravariegata.jpg"
     ), (
         "Oxalis Pourpre",
         2,
-        3,
-        1,
-        "moyenne",
+        "Très lumineux - Soleil direct toléré",
+        "Souvent - La terre doit toujours être humide",
+        "Brumiser si les feuilles deviennent brunes",
         "/src/assets/oxalispourpre.jpg"
     ), (
         "Ctenanthe Burle Marxii",
-        1,
-        1,
         2,
-        "moyenne",
+        "Lumineux - Jamais de soleil direct",
+        "Maintenir le terreau humide",
+        "Brumiser régulièrement",
         "/src/assets/ctenanthe.jpg"
     ), (
         "Monstera Adansonii",
         1,
-        2,
-        3,
-        "moyenne",
+        "Lumineux - Pas de soleil direct",
+        "Maintenir le terreau humide",
+        "Brumiser régulièrement",
         "/src/assets/adansonii.jpg"
     ), (
         "Philodendron Micans",
-        2,
-        3,
         1,
-        "moyenne",
+        "Lumineux - Pas de soleil direct",
+        "Maintenir le terreau humide",
+        "Eviter de brumiser",
         "/src/assets/micans.jpg"
     ), (
-        " Pachira Aquatica ",
+        "Pachira Aquatica",
         3,
-        2,
-        1,
-        "moyenne",
+        "Très lumineux - Soleil direct toléré",
+        "Maintenir le terreau humide",
+        "Brumiser occasionnellement",
         "/src/assets/pachira.jpg"
     ), (
-        " Syngonium Neon Robusta ",
+        "Syngonium Neon Robusta",
         2,
-        2,
-        3,
-        "moyenne",
+        "Lumineux - Pas de soleil direct",
+        "1 à 2 fois par semaine",
+        "Brumiser régulièrement",
         "/src/assets/syngoneon.jpg"
     ), (
         "Pothos N 'Joy",
-        3,
         2,
-        1,
-        "moyenne",
+        "Lumineux - Pas de soleil direct",
+        "Maintenir le terreau humide",
+        "Brumiser régulièrement",
         "/src/assets/njoy.jpg"
     ), (
         "Begonia Maculata",
         2,
-        2,
-        2,
-        "moyenne",
+        "Lumineux - Pas de soleil direct",
+        "Environ une fois par semaine",
+        "brumiser régulièrement",
         "/src/assets/begomaculata.jpg"
     );
 

@@ -1,5 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { IoIosWater } from "react-icons/io";
+import { BsFillSunFill } from "react-icons/bs";
+import { WiHumidity } from "react-icons/wi";
 import axios from "axios";
 
 import "./styles/PlantInfo.css";
@@ -20,26 +23,28 @@ export default function PlantInfo() {
     <div>
       <Header />
       <div className="plant-infos">
-        <div className="image half">
+        <div className="image-infos">
           <img src={plant.image} alt={`${plant.name}`} />
         </div>
 
-        <div className="detail half">
+        <div className="details-container">
           <h1>{plant.name}</h1>
-
-          <div className="data">
-            <div className="category">Categorie : {plant.category}</div>
-
-            <div className="light">
-              <p>Exposition : {plant.light}</p>
-            </div>
-
-            <div className="water">
-              <p>Arrosage : {plant.water}</p>
-            </div>
-            <div className="humidity">
-              <p>Humidité : {plant.humidity}</p>
-            </div>
+          <h3>Categorie : {plant.category}</h3>
+          <div className="details-list">
+            <ul>
+              <li>
+                <BsFillSunFill />
+                {plant.light}
+              </li>
+              <li>
+                <IoIosWater />
+                {plant.water}
+              </li>
+              <li>
+                <WiHumidity />
+                {plant.humidity}
+              </li>
+            </ul>
           </div>
         </div>
       </div>

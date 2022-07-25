@@ -1,28 +1,10 @@
 .plant-infos {
   display: flex;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-.plant-infos .half {
-  flex: 1;
-}
-
-.detail {
-  padding: 0 30px;
-}
-
-.data {
-  padding-top: 50px;
-}
-
-.center {
-  display: flex;
   justify-content: center;
 }
 
-.plant-infos .image img {
-  width: 100%;
+.plant-infos .image-infos img {
+  width: 35vw;
 }
 
 .plant-infos h1 {
@@ -32,9 +14,44 @@
   color: var(--light-brown);
 }
 
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50vh;
+  width: 60vw;
+}
+
+.details-list {
+  border: 1px solid;
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  background-color: var(--very-light);
+}
+
 @media only screen and (max-width: 600px) {
   .plant-infos {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .details-container {
+    width: 100vw;
+  }
+
+  .details-list {
+    width: 85vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .plant-infos .image-infos img {
+    width: 70vw;
   }
 }

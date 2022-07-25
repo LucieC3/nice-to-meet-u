@@ -18,6 +18,13 @@
   border-radius: 10px;
 }
 
+.websites-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75vh;
+}
+
 @media only screen and (max-width: 600px) {
   .websites-list-container {
     width: 80vw;

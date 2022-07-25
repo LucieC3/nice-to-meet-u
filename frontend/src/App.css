@@ -21,9 +21,8 @@
   font-family: var(--font);
 }
 
-#page-wrap {
-  padding-bottom: 10px;
-  padding-top: 10px;
+.App {
+  background-color: var(--light-taupe);
 }
 
 .main {

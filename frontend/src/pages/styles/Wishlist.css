@@ -7,6 +7,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 45vh;
+  height: 70vh;
+  background-color: var(--very-light);
+}
+
+.wish-list {
+  display: flex;
+  height: 55vh;
+  flex-direction: column;
+  justify-content: space-between;
 }

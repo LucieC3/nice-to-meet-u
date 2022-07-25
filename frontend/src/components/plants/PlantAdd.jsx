@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./styles/PlantAdd.css";
+// import axios from "axios";
 
 export default function PlantAdd() {
   const [categories, setCategories] = useState([]);
@@ -13,7 +14,25 @@ export default function PlantAdd() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Code de gestion de l'envoi du formulaire en POST
+    /*   const plant = {
+      name,
+      category,
+      water,
+      light,
+      humidity,
+      image,
+    };
+
+      axios
+        .post(`${import.meta.env.VITE_BACKEND_URL}/plantes`)
+        .then((response) => response.data)
+        .then((data) => {
+          setPlants(data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+*/
   };
 
   return (

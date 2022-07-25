@@ -20,7 +20,7 @@ function Login() {
       });
     } else {
       axios
-        .get(
+        .post(
           `${import.meta.env.VITE_BACKEND_URL}/admin`,
           { pseudo, password },
           { withCredentials: true }

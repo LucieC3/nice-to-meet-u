@@ -34,8 +34,8 @@ class PlantManager extends AbstractManager {
 
   update(item) {
     return this.connection.query(
-      `update ${PlantManager.table} set title = ? where id = ?`,
-      [item.title, item.id]
+      `update ${PlantManager.table} set name = ? where id = ?`,
+      [item.name, item.id]
     );
   }
 }

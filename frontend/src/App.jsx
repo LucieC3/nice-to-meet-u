@@ -18,7 +18,7 @@ function App() {
 
         <Route path="/plantes" element={<Plants />} />
         <Route path="/plantes/:id" element={<PlantInfo />} />
-        <Route path="/plantes/ajouter-une-plante" element={<PlantAdd />} />
+        <Route path="/ajouter-une-plante" element={<PlantAdd />} />
 
         <Route path="/calendrier" element={<Calendar />} />
         <Route path="/sites-utiles" element={<Websites />} />

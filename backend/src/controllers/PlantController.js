@@ -1,3 +1,6 @@
+// const multer = require("multer");
+// const upload = multer({ dest: "tmp/" });
+// const fs = require("fs");
 const models = require("../models");
 
 class PlantController {
@@ -61,6 +64,21 @@ class PlantController {
         console.error(err);
         res.sendStatus(500);
       });
+
+    /* upload.single("mon-image"),
+      function (req, res, next) {
+        fs.rename(
+          req.file.path,
+          `src/assets/${req.file.originalname}`,
+          function (err) {
+            if (err) {
+              res.send("problème durant le déplacement");
+            } else {
+              res.send("Fichier uploadé avec succès");
+            }
+          }
+        );
+      }; */
   };
 
   static delete = (req, res) => {

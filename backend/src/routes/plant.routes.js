@@ -6,7 +6,7 @@ const routes = express.Router();
 routes.get("/plantes", PlantController.browse);
 routes.get("/plantes/:id", PlantController.read);
 routes.put("/plantes/:id", PlantController.edit);
-routes.post("/plantes", PlantController.add);
+routes.post("/ajouter-une-plante", PlantController.add);
 routes.delete("/plantes/:id", PlantController.delete);
 
 routes.get("/categories", CategoryController.browse);

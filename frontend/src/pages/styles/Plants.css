@@ -1,18 +1,13 @@
 .plants-list-container {
-  width: 100%;
-}
-
-.plants-list-container {
   margin-top: 20px;
-  text-align: center;
-  font-size: 2rem;
 }
 
 .plants-list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 10vh;
+  justify-content: space-around;
 }
 
 .filter {

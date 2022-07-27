@@ -33,6 +33,13 @@
   background-color: var(--very-light);
 }
 
+.delete-plant {
+  background-color: var(--light-taupe);
+  border: none;
+  font-size: 0.7rem;
+  color: var(--brown);
+}
+
 @media only screen and (max-width: 600px) {
   .plant-infos {
     display: flex;

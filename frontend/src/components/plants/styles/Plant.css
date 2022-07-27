@@ -1,18 +1,18 @@
 .plant-image {
-  height: 250px;
-  width: 250px;
+  height: 40vh;
+  width: 20vw;
   object-fit: cover;
+  border: 10px double black;
 }
 
 .plant-container {
-  margin: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: var(--white);
   width: 25vw;
-  height: 45vh;
+  height: 50vh;
 }
 
 .legende {
@@ -26,6 +26,8 @@
 .plant-name {
   color: var(--light-brown);
   margin-top: 6px;
+  font-size: 1.2rem;
+  font-weight: 200;
 }
 
 .plant-name:hover {
@@ -35,5 +37,9 @@
 @media only screen and (max-width: 600px) {
   .plant-container {
     width: 80vw;
+  }
+
+  .plant-image {
+    width: 67vw;
   }
 }

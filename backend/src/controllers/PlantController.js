@@ -82,7 +82,7 @@ class PlantController {
   };
 
   static delete = (req, res) => {
-    models.category
+    models.plant
       .delete(req.params.id)
       .then(() => {
         res.sendStatus(204);

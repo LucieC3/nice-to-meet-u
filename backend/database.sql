@@ -55,7 +55,7 @@ VALUES (
         "Oxalis Pourpre",
         2,
         "Très lumineux - Soleil direct toléré",
-        "Souvent - La terre doit toujours être humide",
+        "Maintenir le terreau humide",
         "Brumiser si les feuilles deviennent brunes",
         "/src/assets/oxalispourpre.jpg"
     ), (
@@ -107,6 +107,55 @@ VALUES (
         "Environ une fois par semaine",
         "brumiser régulièrement",
         "/src/assets/begomaculata.jpg"
+    ), (
+        "Peperomia Scandens",
+        2,
+        "Très lumineux - Pas de soleil direct",
+        "1 fois par semaine au printemps/été - Bien laisser sécher le terreau",
+        "Brumiser régulièrement",
+        "/src/assets/peperomia-scandens.jpg"
+    ), (
+        "Ficus Elastica",
+        3,
+        "Lumineux - Tolère un peu d'ombre",
+        "1 fois par semaine au printemps/été - Bien laisser sécher le terreau",
+        "Brumiser régulièrement",
+        "/src/assets/ficus-elastica.jpg"
+    ), (
+        "Aglaonema Pink",
+        2,
+        "Lumineux - Pas de soleil direct",
+        "Maintenir le terreau humide",
+        "Brumiser régulièrement",
+        "/src/assets/aglaonema-pink.jpg"
+    ), (
+        "Euphorbe Trigona Rubra",
+        3,
+        "Très lumineux - Pas de soleil direct",
+        "1 fois par semaine au printemps/été - Bien laisser sécher le terreau",
+        "Pas de brumisation",
+        "/src/assets/euphorbe.jpg"
+    ), (
+        "Chlorophytum",
+        2,
+        "Lumineux - Pas de soleil direct",
+        "1 fois par semaine au printemps/été",
+        "Brumiser régulièrement",
+        "/src/assets/chlorophytum.jpg"
+    ), (
+        "Philodendron Birkin",
+        2,
+        "Lumineux - Pas de soleil direct",
+        "1 fois par semaine au printemps/été - Bien laisser sécher le terreau",
+        "Brumiser régulièrement",
+        "/src/assets/philo-birkin.jpg"
+    ), (
+        "Oxalis Plum Crazy",
+        2,
+        "Lumineux - Pas de soleil direct",
+        "Maintenir le terreau humide",
+        "Brumiser occasionnellement",
+        "/src/assets/oxalis-plumcrazy.jpg"
     );
 
 DROP TABLE IF EXISTS `category`;

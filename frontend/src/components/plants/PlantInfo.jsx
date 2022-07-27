@@ -7,6 +7,7 @@ import axios from "axios";
 
 import "./styles/PlantInfo.css";
 import Header from "../header/Header";
+import PlantDelete from "./PlantDelete";
 
 export default function PlantInfo() {
   const { id } = useParams();
@@ -46,6 +47,7 @@ export default function PlantInfo() {
               </li>
             </ul>
           </div>
+          <PlantDelete />
         </div>
       </div>
     </div>
